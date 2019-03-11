@@ -105,6 +105,24 @@
 	{k40, k41,   k42, k43},   \
 	{k50, KC_NO, k52, KC_NO}  \
 }
+
+#define LAYOUT_numpad_6x4v2(                      \
+  k00, k01, k02, k03,   \
+  k10, k11, k12, k13,   \
+  k20, k21, k22,        \
+  k30, k31, k32, k23,   \
+  k40, k41, k42,        \
+  k50, k51, k52, k43                        \
+)                    \
+  {                                             \
+   {k00, k01,   k02, k03},                      \
+   {k10, k11,   k12, k13},                      \
+   {k20, k21,   k22, k23},                      \
+   {k30, k31,   k32, KC_NO},                    \
+   {k40, k41,   k42, k43},                      \
+   {k50, k51,   k52, KC_NO}                       \
+   }
+
 void matrix_init_user(void);
 void matrix_scan_user(void);
 
