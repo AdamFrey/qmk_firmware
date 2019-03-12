@@ -43,22 +43,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |----|----|----|----|
    * |RGBM|RGBP|BTOG| -  |
    * |----|----|----|----|
-   * |HUD |HUI |BON |    |
+   * |TAB |UP  |ShTb|    |
    * |----|----|----| +  |
-   * |SAD |SAI |BOFF|    |
+   * |<-  |Down|->  |    |
    * |----|----|----|----|
-   * |VAD |VAS | 3  |    |
+   * |SPC |VAS | BS |    |
    * |----|----|----| En |
-   * |   0     |RST |    |
+   * | FN |    |RST |    |
    * `-------------------'
    */
-[_FL] = LAYOUT_numpad_6x4(
+[_FL] = LAYOUT_numpad_6x4v2(
   RGB_TOG,  KC_TAB,   KC_TRNS,   KC_BSPC, \
   RGB_MOD,  RGB_M_P,  BL_TOGG,   KC_PMNS, \
-  RGB_HUD,  RGB_HUI,  BL_ON,              \
-  RGB_SAD,  RGB_SAI,  BL_OFF,    KC_PPLS, \
-  RGB_VAD,  RGB_VAI,  KC_P3,              \
-  KC_P0,              RESET,     KC_PENT),
+  KC_TAB,   KC_UP,    LSFT(KC_TAB),         \
+  KC_LEFT,  KC_DOWN,  KC_RIGHT,    KC_PPLS, \
+  KC_SPACE, RGB_VAI,  KC_BSPC,              \
+  KC_P0,    KC_P0,    RESET,     KC_PENT),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
