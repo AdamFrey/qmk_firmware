@@ -82,3 +82,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          return true;
    }
 }
+// Underglow
+rgblight_enable()
+rgblight_set_rgb_purple()
