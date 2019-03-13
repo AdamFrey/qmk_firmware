@@ -91,6 +91,6 @@ void keyboard_post_init_user(void) {
   rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
   rgblight_setrgb_purple();
   // Backlight
-  backlight_level(1);
-  backlight_enable();
+  // backlight_level(1);
+  // backlight_enable();
 }
