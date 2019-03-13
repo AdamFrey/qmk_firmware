@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 [_FL] = LAYOUT_numpad_6x4v2(
   RGB_TOG,      KC_TAB,   KC_TRNS,   KC_BSPC, \
-  RGB_MOD,      RGB_M_P,  BL_TOGG,   KC_PMNS, \
+  RGB_MOD,      BL_DEC,  BL_TOGG,   KC_PMNS, \
   LSFT(KC_TAB), KC_UP,    KC_TAB,   \
   KC_LEFT,      KC_DOWN,  KC_RIGHT,    KC_PPLS, \
   KC_SPACE,     RGB_VAI,  KC_BSPC,              \
@@ -91,6 +91,6 @@ void keyboard_post_init_user(void) {
   rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);
   rgblight_setrgb_purple();
   // Backlight
-  backlight_enable();
   backlight_level(1);
+  backlight_enable();
 }
