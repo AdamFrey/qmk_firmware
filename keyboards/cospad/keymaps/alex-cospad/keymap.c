@@ -92,5 +92,5 @@ void keyboard_post_init_user(void) {
   rgblight_setrgb_purple();
   // Backlight
   backlight_enable();
-  backlight_level(7);
+  backlight_level(4);
 }
