@@ -82,6 +82,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          return true;
    }
 }
-// Underglow
-void rgblight_enable();
-void rgblight_set_rgb_purple();
+
+void keyboard_post_init_user(void) {
+  // Underglow
+  rgblight_enable();
+  rgblight_set_rgb_purple();
+}
